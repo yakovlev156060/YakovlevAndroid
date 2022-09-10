@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             var content: String = "",
             var publisher: String = "",
             var likes: Long = 0,
-            var shares: Long = 0,
+            var shares: Long = 980,
             var likedByMe: Boolean = false,
         )
         val post = Post(
@@ -54,16 +54,7 @@ class MainActivity : AppCompatActivity() {
             likeCount?.text = thousands(post.likes)
             shareCount?.text = thousands(post.shares)
 
-            root.setOnClickListener {
-                Log.d("stuff", "stuff")
-            }
-
-            avatar.setOnClickListener {
-                Log.d("stuff", "avatar")
-            }
-
             like?.setOnClickListener {
-                Log.d("stuff", "like")
                 post.likedByMe = !post.likedByMe
                 like.setImageResource(
                     if (post.likedByMe) R.drawable.ic_liked_24 else R.drawable.ic_like_24
@@ -73,7 +64,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             share?.setOnClickListener {
-                Log.d("stuff", "share")
                 post.shares+=10
                 shareCount?.text = thousands(post.shares)
             }
