@@ -13,8 +13,8 @@
         android:layout_marginHorizontal="@dimen/margin_default"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@sample/posts_avatars"
-        tools:srcCompat="@sample/posts_avatars" />
+        tools:srcCompat="@sample/posts_avatars"
+        android:src="@mipmap/post_avatar_drawable"/>
 
     <TextView
         android:id="@+id/author"
@@ -28,7 +28,8 @@
         app:layout_constraintEnd_toStartOf="@id/menu"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="@id/avatar"
-        tools:text="@sample/posts.json/data/author" />
+        tools:text="@sample/posts.json/data/author"
+        android:text="@sample/posts.json/data/author" />
 
     <TextView
         android:id="@+id/publisher"
@@ -38,7 +39,8 @@
         app:layout_constraintBottom_toBottomOf="@id/avatar"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toBottomOf="@id/author"
-        tools:text="@sample/posts.json/data/published" />
+        tools:text="@sample/posts.json/data/published"
+        android:text="@sample/posts.json/data/published" />
 
     <ImageButton
         android:id="@+id/menu"
@@ -65,9 +67,6 @@
         android:padding="@dimen/margin_default"
         app:layout_constraintTop_toTopOf="@id/barrierTop"
         tools:text="@sample/posts.json/data/content" />
-
-
-
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/footer"
